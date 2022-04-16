@@ -4,7 +4,7 @@ import logo from '../../../Images/logo.png';
 
 const NavBar = () => {
     return (
-        <Navbar style={{ backgroundColor: '#3c3e4f' }} expand="lg">
+        <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <img src={logo} alt="" />
