@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Container, FormControl, InputGroup } from 'react-bootstrap';
 import backgroundImage from '../../../Images/background.png';
-import logo from '../../../Images/logo2.png';
+import './Header.css';
 
 const Header = () => {
 
@@ -16,10 +16,12 @@ const Header = () => {
         <header style={style} className='d-flex align-items-center'>
             <Container
                 className='d-flex flex-column align-items-center p-4 rounded-3'>
-                <img src={logo} alt="" />
-                <h1 style={{ color: '#b2c7d9', textShadow: '2px 2px black' }}>At the heart of great products.</h1>
-                <h3 style={{ color: '#f084ec', textShadow: '2px 2px black' }}> Since 2020.</h3>
-                <h5 style={{ color: '#b2c7d9' }}>The independent store with traditional values.</h5>
+                <div className='anim-parent'>
+                    <p id="error">Your <span>Dayly</span> Needs</p>
+                    <p style={{ fontSize: '10px', margin: '4px', color: '#b2c7d9', textShadow: '2px 2px black' }}>At the heart of great products.</p>
+                    <p id="code">Since <span>20</span><span>20</span></p>
+                    <p style={{ fontSize: '10px', margin: '4px', color: '#b2c7d9' }}>The independent store with traditional values.</p>
+                </div>
                 <div className="w-75 bg-white rounded-pill">
                     <InputGroup style={{ borderRadius: '50%' }} >
                         <FormControl

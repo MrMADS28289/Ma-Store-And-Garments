@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import logo from '../../../Images/logo.png';
+import logo from '../../../Images/logo2.png';
 
 const NavBar = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">
-                    <img src={logo} alt="" />
+                <Navbar.Brand className='flex font-serif' href="#home">
+                    <img className='h-[20px]' src={logo} alt="" />
+                    <h5 className=' ms-1 text-pink-400'>Ma <span className='text-sky-400'>Store</span>.</h5>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
