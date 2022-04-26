@@ -1,32 +1,32 @@
-import { Button } from 'react-bootstrap';
 import React from 'react';
-import { Container, FormControl, InputGroup, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, FormControl, InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../Images/logo2.png';
 
-const NavBar = () => {
+const NavStyle = () => {
     return (
-        <Navbar bg="light" expand="lg">
-            <Container>
-                <Navbar.Brand className='flex font-serif md:hidden' href="#home">
+        <Container className='hidden md:block'>
+            <div className='flex py-3 justify-between'>
+                <div className='flex px-1'>
                     <img className='h-[20px]' src={logo} alt="" />
                     <h5 className=' ms-1 text-pink-400'>Ma <span className='text-sky-400'>Store</span>.</h5>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto md:bg-[#d63384] md:text-white">
-                        <Nav.Link to="home/#home">Home</Nav.Link>
-                        <Nav.Link to="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                </Navbar.Collapse>
-                <div className='flex md:hidden'>
+                </div>
+                <div className="w-2/4 bg-white border-2 rounded-pill hidden md:block">
+                    <InputGroup style={{ borderRadius: '50%' }} >
+                        <FormControl
+                            className='b rounded-pill border-0'
+                            placeholder="Find your product"
+                            aria-label="Recipient's username"
+                            aria-describedby="basic-addon2"
+                        />
+                        <Button
+                            className='bg-danger text-white border-0 rounded-pill'
+                            variant="outline-secondary" id="button-addon2">
+                            Search
+                        </Button>
+                    </InputGroup>
+                </div>
+                <div className='flex'>
                     <Link title='Wish List' to='/wishlist' className='relative'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-neutral-900 me-2 hover:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -40,9 +40,9 @@ const NavBar = () => {
                         <p className='bg-[#d25cca] text-white h-[15px] w-[15px] rounded-full flex justify-center items-center absolute top-0 ml-4  text-xs'>0</p>
                     </Link>
                 </div>
-            </Container>
-        </Navbar>
+            </div>
+        </Container>
     );
 };
 
-export default NavBar;
+export default NavStyle;
