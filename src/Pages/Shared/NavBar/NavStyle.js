@@ -20,7 +20,7 @@ const NavStyle = () => {
                             aria-describedby="basic-addon2"
                         />
                         <Button
-                            className='bg-danger text-white border-0 rounded-pill'
+                            className='bg-info text-white border-0 rounded-pill'
                             variant="outline-secondary" id="button-addon2">
                             Search
                         </Button>

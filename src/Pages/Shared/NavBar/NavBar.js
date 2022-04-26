@@ -1,6 +1,5 @@
-import { Button } from 'react-bootstrap';
 import React from 'react';
-import { Container, FormControl, InputGroup, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../Images/logo2.png';
 
@@ -14,10 +13,10 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto md:bg-[#d63384] md:text-white">
-                        <Nav.Link to="home/#home">Home</Nav.Link>
-                        <Nav.Link to="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                    <Nav className="me-auto md:bg-[#0dcaf0] md:p-2">
+                        <Nav.Link className='text-black' to="home/#home">Home</Nav.Link>
+                        <Nav.Link className='text-black' to="#link">Shop</Nav.Link>
+                        <NavDropdown title="Pages" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -39,6 +38,14 @@ const NavBar = () => {
                         </svg>
                         <p className='bg-[#d25cca] text-white h-[15px] w-[15px] rounded-full flex justify-center items-center absolute top-0 ml-4  text-xs'>0</p>
                     </Link>
+                </div>
+                <div className='hidden md:block'>
+                    <button className='bg-pink-500 hover:bg-[#dc71f4] text-white p-1 leading-3 px-5 py-2 flex justify-center items-center'>
+                        <div>
+                            <p className='text-sm leading-none mb-1'>BLACK FRIDAY</p>
+                            <p className='text-[12px] leading-none m-0'>Get 45% off!</p>
+                        </div>
+                    </button>
                 </div>
             </Container>
         </Navbar>
